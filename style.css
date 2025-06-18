@@ -124,7 +124,7 @@ nav a:hover {
 }
 
 .hero ul li {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 500;
   font-size: 1.5rem;
 }
@@ -136,6 +136,10 @@ nav a:hover {
   padding: .75rem;
 }
 
+.hero ul li:last-child {
+  margin-bottom: 2rem;
+}
+
 .btn {
   background-color: #B87C4B;
   color: white;
@@ -145,6 +149,11 @@ nav a:hover {
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
   transition: background 0.3s;
+}
+
+.btn img {
+  vertical-align: text-top;
+  width: 20px;
 }
 
 .btn:hover {
@@ -189,12 +198,16 @@ nav a:hover {
   background-color: #fdf4ed;
 }
 
+.sub-title {
+  font-weight: 900;
+}
+
 .grid {
   display: flex; 
   justify-content: center; 
   flex-wrap: wrap; 
-  gap: 20px;
-  max-width: 1000px;
+  gap: 1rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -203,9 +216,9 @@ nav a:hover {
   border-radius: 12px; 
   margin-bottom: 12px;
   padding: 20px; 
-  width: 220px;
+  width: 20%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  flex: 0 0 calc(33.333% - 20px);
+  /* flex: 0 0 calc(33.333% - 20px); */
 }
 
 .card h3 {
@@ -230,8 +243,15 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
+.cta {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
+
 .cta-text {
-  /* color: #4A707A; */
+  text-align: center;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -267,6 +287,10 @@ nav a:hover {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+}
+
+.btn-container a img {
+  width: 20px
 }
 
 .depoimentos {
@@ -466,6 +490,16 @@ nav a:hover {
   background-color: #c42a5f;
 }
 
+.fixed-wpp {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.fixed-wpp a img {
+  width: 70px;
+}
+
 footer {
   background-color: white;
   color: black;
@@ -575,16 +609,28 @@ footer {
     padding: 1.5rem 0;
   }
 
-  .hero .image img {
-    object-fit: cover;
+  .hero {
+    padding: 1rem 0;
   }
 
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  .hero .text {
+    max-width: 100%;
+    margin-left: auto;
+    padding: 2rem;
+  }
+
+  .hero .image img {
+    object-fit: cover;
+    display: none
+  }
+
+  .sombra {
+    display: none;
   }
 
   .card {
     padding: 2rem 1rem;
+    width: 40%;
   }
 
   .sobre {
@@ -595,28 +641,58 @@ footer {
     max-width: 100%;
   }
 
+  .sobre .btn-container {
+    width: 120%;
+    text-align: start;
+  }
+
+  .produtos-digitais .btn-container {
+    text-align: center
+  }
+
   .contato {
     padding: 2rem;
+  }
+
+  .produtos {
+    display: inline-block;
+    padding: 3rem 0;
+  }
+
+  .produto-card {
+    width: 100%;
+    margin-bottom: 1rem
   }
 }
 
 @media (max-width: 450px) {
-  .hero .text {
-    max-width: 100%;
-  }
-  
   .hero .image {
     padding-top: 50px; 
     width: 90%;
     margin: auto;
+    display: none;
   }
 
   .grid {
     display: block;
   }
 
+  .cta {
+    width: 100%;
+    text-align: start;
+  }
+
   .especialidades .card {
     margin: auto;
+  }
+
+  .card {
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+
+  .produtos-digitais .btn-container {
+    margin-top: 1rem;
   }
 
   @keyframes scroll {
